@@ -14,7 +14,7 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    let raw_values = common::read_file(&args.filename);
+    let raw_values = common::read_file_to_vec_of_strings(&args.filename);
 
     let mut calorie_sums_vec = calculate_calorie_sums(&raw_values);
 

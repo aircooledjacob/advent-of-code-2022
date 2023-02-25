@@ -14,7 +14,7 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    let raw_values = common::read_file(&args.filename);
+    let raw_values = common::read_file_to_vec_of_strings(&args.filename);
 
     let largest_calories_sum = find_largest_calories_sum(&raw_values);
 

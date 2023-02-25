@@ -14,18 +14,9 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    let raw_lines: Vec<String> = common::read_file(&args.filename);
+    let raw_lines: Vec<String> = common::read_file_to_vec_of_strings(&args.filename);
 
-    let tuple_vec: Vec<(char, char)> = raw_lines
-        .iter()
-        .map(|line| {
-            let split_line = line.split_once(' ').expect("Malformed input");
-            (
-                split_line.0.chars().collect::<Vec<char>>()[0],
-                split_line.1.chars().collect::<Vec<char>>()[0],
-            )
-        })
-        .collect();
+    let tuple_vec = common::d2::parse_lines_to_char_tuples(&raw_lines);
 
     let mut score: u32 = 0;
     for (opponent_choice, your_choice) in tuple_vec {

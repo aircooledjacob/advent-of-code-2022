@@ -1,7 +1,9 @@
+pub mod d2;
+
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-pub fn read_file(input_filename: &String) -> Vec<String> {
+pub fn read_file_to_vec_of_strings(input_filename: &String) -> Vec<String> {
     let file: File = File::open(input_filename).expect("Unable to open input file");
     let reader = BufReader::new(file);
 

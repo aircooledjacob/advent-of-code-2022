@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="996e00bb-2acd-4510-92aa-fdd2cd8c6c35" name="advent-of-code-2022" defaultType="TOOL">
+      <configuration id="a6809ab1-425a-42dd-8d61-c9084b2ff5b6" name="advent-of-code-2022">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_buid_with_cargo" />
+        </build>
+        <clean type="TOOL">
+          <tool actionId="Tool_External Tools_clean_with_cargo" />
+        </clean>
+      </configuration>
+    </target>
+  </component>
+</project>

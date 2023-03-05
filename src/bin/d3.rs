@@ -28,16 +28,7 @@ fn main() {
             .filter(|item| compartment_1.contains(*item))
             .collect();
 
-        let duplicate_priorities: HashSet<u8> = duplicates
-            .iter()
-            .map(|duplicate| {
-                if *duplicate as u8 >= b'a' {
-                    (*duplicate as u8 - b'a') + 1
-                } else {
-                    (*duplicate as u8 - b'A') + 27
-                }
-            })
-            .collect();
+        let duplicate_priorities = common::d3::parse_items_to_priorities(&duplicates);
 
         sum_of_duplicate_priorities += u32::from(duplicate_priorities.iter().sum::<u8>());
     }
